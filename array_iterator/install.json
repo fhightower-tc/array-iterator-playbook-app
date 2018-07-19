@@ -1,0 +1,42 @@
+{
+    "allowOnDemand": true,
+    "displayName": "Array Iterator",
+    "features": [
+        "secureParams"
+    ],
+    "languageVersion": "3.6.x",
+    "listDelimiter": "|",
+    "note": "Iterate through an array and send each item to a playbook trigger.",
+    "params": [
+        {
+            "label": "Array",
+            "name": "array",
+            "playbookDataType": [
+                "String"
+            ],
+            "required": true,
+            "type": "String",
+            "note": "The array through which you would like to iterate."
+        },
+        {
+            "label": "Playbook Trigger Link",
+            "name": "playbook_trigger_link",
+            "playbookDataType": [
+                "String"
+            ],
+            "required": true,
+            "type": "String",
+            "note": "The playbook link to which you would like to send each item in the array."
+        }
+    ],
+    "playbook": {
+        "outputVariables": [],
+        "retry": {},
+        "type": "Client"
+    },
+    "programLanguage": "python",
+    "programMain": "array_iterator",
+    "programVersion": "0.1.0",
+    "repeatingMinutes": [],
+    "runtimeLevel": "Playbook"
+}

@@ -1,5 +1,7 @@
 # Array Iterator
 
+This app can be downloaded [here](https://tc.hightower.space/post/playbook-apps/array-iterator/).
+
 ## Summary
 
 Iterate through an array and send each item in the array to a playbook trigger link.

@@ -2,7 +2,8 @@
     "allowOnDemand": true,
     "displayName": "Array Iterator",
     "features": [
-        "secureParams"
+        "secureParams",
+        "aotExecutionEnabled"
     ],
     "languageVersion": "3.6.x",
     "listDelimiter": "|",
@@ -11,22 +12,24 @@
         {
             "label": "Array",
             "name": "array",
+            "note": "The array through which you would like to iterate.",
             "playbookDataType": [
-                "String"
+                "String",
+                "StringArray",
+                "BinaryArray"
             ],
             "required": true,
-            "type": "String",
-            "note": "The array through which you would like to iterate."
+            "type": "String"
         },
         {
             "label": "Playbook Trigger Link",
             "name": "playbook_trigger_link",
+            "note": "The playbook link to which you would like to send each item in the array.",
             "playbookDataType": [
                 "String"
             ],
             "required": true,
-            "type": "String",
-            "note": "The playbook link to which you would like to send each item in the array."
+            "type": "String"
         }
     ],
     "playbook": {

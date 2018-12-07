@@ -18,11 +18,12 @@ def parse_arguments():
 def main():
     """."""
     args = parse_arguments()
-    array_string = tcex.playbook.read(args.array)
+
+    array = tcex.playbook.read(args.array)
     playbook_trigger_link = tcex.playbook.read(args.playbook_trigger_link)
 
-    # TODO: add try-except with error message here
-    array = json.loads(array_string)
+    if isinstance(array, str):
+        array = json.loads(array)
 
     tcex.log.debug('Found {} items in array: {}'.format(len(array), array))
     tcex.log.debug('Sending each item in array to {}'.format(playbook_trigger_link))
